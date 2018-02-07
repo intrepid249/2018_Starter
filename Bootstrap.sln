@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bootstrap", "bootstrap\Bootstrap.vcxproj", "{AF59BB0B-E059-4773-83DC-728A949647DA}"
 EndProject
@@ -21,6 +21,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CobwebProject", "CobwebProj
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysicsEngine_01", "PhysicsEngine_01\PhysicsEngine_01.vcxproj", "{EF190FBE-DA6D-41FC-AECE-5CF46B34BA95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF59BB0B-E059-4773-83DC-728A949647DA} = {AF59BB0B-E059-4773-83DC-728A949647DA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PartnerCodeProject_1", "PartnerCodeProject_1\PartnerCodeProject_1.vcxproj", "{546E48EE-7D21-4223-809C-98B3B7138545}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AF59BB0B-E059-4773-83DC-728A949647DA} = {AF59BB0B-E059-4773-83DC-728A949647DA}
 	EndProjectSection
@@ -73,6 +78,14 @@ Global
 		{EF190FBE-DA6D-41FC-AECE-5CF46B34BA95}.Release|x64.Build.0 = Release|x64
 		{EF190FBE-DA6D-41FC-AECE-5CF46B34BA95}.Release|x86.ActiveCfg = Release|Win32
 		{EF190FBE-DA6D-41FC-AECE-5CF46B34BA95}.Release|x86.Build.0 = Release|Win32
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Debug|x64.ActiveCfg = Debug|x64
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Debug|x64.Build.0 = Debug|x64
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Debug|x86.ActiveCfg = Debug|Win32
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Debug|x86.Build.0 = Debug|Win32
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Release|x64.ActiveCfg = Release|x64
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Release|x64.Build.0 = Release|x64
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Release|x86.ActiveCfg = Release|Win32
+		{546E48EE-7D21-4223-809C-98B3B7138545}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
