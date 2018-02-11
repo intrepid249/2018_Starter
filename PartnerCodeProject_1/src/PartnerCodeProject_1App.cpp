@@ -5,6 +5,7 @@
 
 #include "resource_manager\ResourceManager.h"
 #include "entities\GameEntity.h"
+#include "entities\player\Player.h"
 #include "components\CKeyboardController.h"
 
 PartnerCodeProject_1App::PartnerCodeProject_1App() {
@@ -21,13 +22,9 @@ bool PartnerCodeProject_1App::startup() {
 	ResourceManager::create();
 	ResourceManager::getInstance()->getFonts()["main"] = std::shared_ptr<aie::Font>(new aie::Font("font/consolas.ttf", 32));
 
-	m_object = std::unique_ptr<GameEntity>(new GameEntity(glm::vec2(10, 10), "textures/grass.png"));
-	// Add a keyboard controller to the entity to control movement
-	std::shared_ptr<CKeyboardController> kc = std::shared_ptr<CKeyboardController>(new CKeyboardController());
-	kc->setKeys(aie::INPUT_KEY_W, aie::INPUT_KEY_S, aie::INPUT_KEY_A, aie::INPUT_KEY_D);
-	kc->setMovementSpeed(175.5f);
-	kc->setParent(m_object.get());
-	m_object->addComponent(kc);
+	m_player = std::unique_ptr<Player>(new Player(glm::vec2(10, 10), "textures/rifle_0.png"));
+	m_player->setScale(glm::vec2(0.37f));
+	m_player->setOrigin(glm::vec2(0.35f, 0.4f));
 
 	return true;
 }
@@ -40,7 +37,7 @@ void PartnerCodeProject_1App::update(float deltaTime) {
 	// input example
 	aie::Input* input = aie::Input::getInstance();
 
-	m_object->update(deltaTime);
+	m_player->update(deltaTime);
 
 	// exit the application
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
@@ -58,7 +55,7 @@ void PartnerCodeProject_1App::draw() {
 	m_renderer->begin();
 
 	// draw your stuff here!
-	m_object->render(m_renderer.get());
+	m_player->render(m_renderer.get());
 
 	
 	// output some text, uses the last used colour

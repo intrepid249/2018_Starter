@@ -165,7 +165,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CMouseController.cpp" />
     <ClCompile Include="src\components\CKeyboardController.cpp" />
+    <ClCompile Include="src\entities\player\Player.cpp" />
+    <ClCompile Include="src\entities\weapon\Bullet.cpp" />
     <ClCompile Include="src\resource_manager\ResourceManager.cpp" />
     <ClCompile Include="src\entities\GameEntity.cpp" />
     <ClCompile Include="src\PartnerCodeProject_1App.cpp" />
@@ -173,8 +176,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\components\CKeyboardController.h" />
+    <ClInclude Include="inc\components\CMouseController.h" />
     <ClInclude Include="inc\components\IComponent.h" />
     <ClInclude Include="inc\entities\GameEntity.h" />
+    <ClInclude Include="inc\entities\player\Player.h" />
+    <ClInclude Include="inc\entities\weapon\Bullet.h" />
     <ClInclude Include="inc\PartnerCodeProject_1App.h" />
     <ClInclude Include="inc\resource_manager\ResourceManager.h" />
   </ItemGroup>

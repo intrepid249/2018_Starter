@@ -6,6 +6,7 @@
 #include <memory>
 
 class GameEntity;
+class Player;
 
 class PartnerCodeProject_1App : public aie::Application {
 public:
@@ -22,5 +23,5 @@ public:
 protected:
 	std::unique_ptr<aie::Renderer2D>	m_renderer;
 
-	std::unique_ptr<GameEntity> m_object;
+	std::unique_ptr<Player> m_player;
 };
